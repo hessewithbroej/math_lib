@@ -2,10 +2,12 @@ name: Unit tests
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
-  run_style_check:
+  run_unit_test:
     runs-on: ubuntu-latest 
     steps: 
         - uses: actions/checkout@v4
