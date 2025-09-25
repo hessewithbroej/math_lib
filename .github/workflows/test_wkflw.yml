@@ -1,4 +1,4 @@
-name: Unit tests
+name: Tests
 
 on:
   push:
@@ -13,4 +13,9 @@ jobs:
         - uses: actions/checkout@v4
         - run: |
             python test/unit/test_math_lib.py
-
+  run_func_test:
+    runs-on: ubuntu-latest 
+    steps: 
+        - uses: actions/checkout@v4
+        - run: |
+            bash test/func/test_add.sh
