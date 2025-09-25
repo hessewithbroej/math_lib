@@ -1,0 +1,14 @@
+name: Unit tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  run_style_check:
+    runs-on: ubuntu-latest 
+    steps: 
+        - uses: actions/checkout@v4
+        - run: |
+            python test/unit/test_math_lib.py
+
