@@ -14,3 +14,6 @@ elif opp == 'div':
     except ZeroDivisionError:
         print("Error: Division by zero.")
         sys.exit(1)
+elif opp == 'prod':
+    print(math_lib.prod(int(p1), int(p2)))
+
